@@ -7,7 +7,7 @@ const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const REGISTER_URL = '/register';
 
-export const Register = () => {
+const Register = () => {
   const userRef = useRef();
   const errRef = useRef();
 
@@ -94,6 +94,7 @@ export const Register = () => {
         <section>
           <h1>Success!</h1>
           <p>
+            {/* eslint-disable-next-line */}
             <a href="#">Sign In</a>
           </p>
         </section>
@@ -177,6 +178,7 @@ export const Register = () => {
             Already registered?<br />
             <span className="line">
               {/*put router link here*/}
+              {/* eslint-disable-next-line */}
               <a href="#">Sign In</a>
             </span>
           </p>
@@ -184,3 +186,5 @@ export const Register = () => {
     </Fragment>
   )
 }
+
+export default Register;
